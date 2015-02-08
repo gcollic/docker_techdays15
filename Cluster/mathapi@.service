@@ -1,0 +1,13 @@
+[Unit]
+Description=MathAPI
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill math
+ExecStartPre=-/usr/bin/docker rm math
+ExecStartPre=/usr/bin/docker pull jpgouigoux/mathapi
+ExecStart=/usr/bin/docker run -t -p 80:5004 --name math jpgouigoux/mathapi
+ExecStop=-/usr/bin/docker stop math
+TimeoutStartSec=900
+
+[X-Fleet]
+X-Conflicts=mathapi@*.service
