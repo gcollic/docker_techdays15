@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "wildetech/hyper-u1404"
+  config.vm.box_check_update = false
+  config.vm.provider "hyperv"
+  config.vm.provision "puppet"
+end

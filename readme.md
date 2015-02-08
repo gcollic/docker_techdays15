@@ -1,0 +1,3 @@
+Ce dépôt contient les démos de notre session sur le déploiement de .NET avec Docker.
+
+Pour Windows, le répertoire `VagrantDemo` contient le Vagrantfile qui vous permettra d'instancier une machine virtuelle HyperV Ubuntu 14.04 avec Docker et les démos. Pour cela, il suffit d'installer Vagrant (par exemple avec `cinst vagrant` si vous avez [chocolatey](https://chocolatey.org/)), de lancer la machine virtuelle avec `vagrant up` (cela téléchargera aussi la machine virtuelle la première fois), puis de s'y connecter en SSH avec la commande `vagrant ssh` ou putty. Les démos seront accessibles depuis la VM dans `/demos/`.
